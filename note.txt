@@ -1,0 +1,53 @@
+开发完成视图后
+编写单元测试
+自己测试
+编写接口文档
+
+1. 短信服务
+
+云通讯  www.yuntongxun.com
+
+2. 图片存储（文件）
+
+图片存储量，空间已满
+图片存储的机器宕机 ，图片有可能丢失或损坏，没有备份
+
+用户A  a.jpg
+用户B  b.jpg
+不同名的同一份资源会被保存多次，造成资源浪费
+
+用户A  a.jpg
+用户B  a.jpg
+同名的不同资源，后保存的会覆盖掉之前保存的同名资源
+
+
+方式1：  自己搭建文件存储系统   开源软件  FastDFS HDF
+方式2：  租用第三方的文件存储系统  七牛云
+
+www.qiniu.com
+pip install qiniu
+
+
+ 3. 登录错误 超过次数 封ip
+
+ 选用redis记录用户登录的错误次数，
+
+ 每错误一次，redis中的数据加1，
+ 达到最大限制次数的时，不再进行用户名密码判断
+
+ 每个用户单独维护一条记录，维护数据有效期
+ "access_%s" % user_ip :   string(次数）
+
+
+ 4. redis的指令
+ http://redisdoc.com/index.html
+ http://redis-py.readthedocs.io/en/latest/#indices-and-tables
+
+
+ 5.  csrf
+ post  put  delete
+
+6. 前端模板
+art-template   http://aui.github.io/art-template/zh-cn/docs/index.html
+
+
